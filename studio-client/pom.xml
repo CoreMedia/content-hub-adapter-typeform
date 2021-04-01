@@ -83,14 +83,6 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- TODO: Move icons to generic dependency -->
-    <!--dependency>
-      <groupId>com.coremedia.blueprint</groupId>
-      <artifactId>salesdemo-icons</artifactId>
-      <version>${project.version}</version>
-      <type>swc</type>
-      <scope>provided</scope>
-    </dependency-->
   </dependencies>
 
   <build>
