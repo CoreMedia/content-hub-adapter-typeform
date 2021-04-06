@@ -191,3 +191,8 @@ $RECYCLE.BIN/
 
 # Microsoft Office Temporary Files
 ~*.*
+
+# NPM:
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
+node
+node_modules

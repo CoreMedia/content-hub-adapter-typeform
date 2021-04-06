@@ -1,7 +1,7 @@
 {
   "studioPlugins": [
     {
-      "mainClass": "com.coremedia.labs.plugins.adapters.filesystem.client.ContentHubTypeformStudioPlugin",
+      "mainClass": "com.coremedia.labs.plugins.adapters.typeform.client.ContentHubTypeformStudioPlugin",
       "name": "Content Hub"
     }
   ]
