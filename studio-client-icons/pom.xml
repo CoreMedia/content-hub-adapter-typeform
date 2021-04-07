@@ -54,12 +54,30 @@
       </resource>
     </resources>
     <plugins>
+      <!-- clean node and node_modules in all themes -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>${project.basedir}</directory>
+              <includes>
+                <include>node/**</include>
+                <include>node_modules/**</include>
+              </includes>
+              <followSymlinks>false</followSymlinks>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
-        <version>1.10.3</version>
+        <version>1.11.0</version>
         <configuration>
-          <nodeVersion>v14.15.0</nodeVersion><!-- LTS -->
+          <nodeVersion>v14.15.4</nodeVersion><!-- LTS -->
           <yarnVersion>v1.22.5</yarnVersion>
           <npmRegistryURL>${coremedia.repository.npm}</npmRegistryURL>
           <arguments>install</arguments>
@@ -70,13 +88,14 @@
             <goals>
               <goal>install-node-and-yarn</goal>
             </goals>
+            <phase>validate</phase>
           </execution>
           <execution>
             <id>install-node-modules</id>
             <goals>
               <goal>yarn</goal>
             </goals>
-            <phase>initialize</phase>
+            <phase>validate</phase>
             <configuration>
               <!--
                Pass proxy config for yarn install. (the installation is
@@ -91,7 +110,7 @@
             <goals>
               <goal>yarn</goal>
             </goals>
-            <phase>initialize</phase>
+            <phase>validate</phase>
             <configuration>
               <arguments>build</arguments>
             </configuration>
@@ -105,7 +124,7 @@
         <executions>
           <execution>
             <id>copy-icon-font-resources</id>
-            <phase>initialize</phase>
+            <phase>validate</phase>
             <goals>
               <goal>run</goal>
             </goals>
