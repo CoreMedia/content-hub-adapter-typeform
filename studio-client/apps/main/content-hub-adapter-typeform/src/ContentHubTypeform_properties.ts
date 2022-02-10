@@ -1,4 +1,4 @@
-import SvgIconUtil from "@coremedia/studio-client.cap-base-models/util/SvgIconUtil";
+import SvgIconUtil from "@coremedia/studio-client.base-models/util/SvgIconUtil";
 import icon from "./icons/typeform_16.svg";
 
 interface ContentHubTypeform_properties {
