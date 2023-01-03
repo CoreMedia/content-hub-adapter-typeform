@@ -9,12 +9,17 @@ If a project is inactive it means that the development has been discontinued and
 
 # Content Hub Adapter for Typeform
 
-The **content-hub-adapter-typeform** extension is providing access to content of a Typeform repository via configuration.
+The **content-hub-adapter-typeform** plugin is providing access to content of a Typeform repository via configuration.
 Content stored in Typeform is available as an additional tree inside the CoreMedia Studio after a successful configuration of the content-hub-adapter.
 
 ## Versioning
+The main branch of this project is suitable for CoreMedia versions since 2101.
+It is based on the plugin architecture.
 
-To find out which CoreMedia versions are supported by this project, please take look at the releases section or on the existing branches. To find the matching version of your CoreMedia system, please checkout the branch with the corresponding name. For example, if your CoreMedia version is 2007.2, checkout the branch cmcc-10-2007.
+For older CoreMedia versions there are branches with corresponding names.
+For example, if your CoreMedia version is 2010.1, checkout the branch cmcc-10-2010.
+These older versions are based on the extensions architecture, because plugins are
+available only since 2101.
 
 ## Documentation & Tutorial
 
