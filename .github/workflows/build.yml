@@ -107,6 +107,7 @@ jobs:
         run: |
           mkdir -p target/bundle
           RESULT="$(cat ${DESCRIPTOR_TEMPLATE})"
+          echo $RESULT
           APPS=$(cat ${DESCRIPTOR_TEMPLATE} | jq -r '.plugins | keys[]')
           for APP in ${APPS}; do
             FILE_TEMPLATE=$(cat ${DESCRIPTOR_TEMPLATE} | jq -r --arg APP "${APP}" '.plugins[$APP].file')
